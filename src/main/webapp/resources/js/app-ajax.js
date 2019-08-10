@@ -19,6 +19,8 @@ $(document).ready(function() {
                 cache: false,
                 success: function (responseText) {
                     $('#textarea').text(responseText);
+                    document.getElementById("inputNumber").value = "";
+
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
                     alert("error:" + jqXHR.status + " exception:" + jqXHR.responseText);

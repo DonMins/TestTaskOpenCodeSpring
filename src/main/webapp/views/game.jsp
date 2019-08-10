@@ -29,18 +29,23 @@
 </head>
 
 <body>
+<ul>
+    <li class="rating"><a href="${contextPath}/rating">Рейтинг игроков</a></li>
+    <button style="float:right" class="button" type="submit" onclick="document.forms['logoutForm'].submit()">Выйти</button>
+
 
     <c:if test="${pageContext.request.userPrincipal.name != null}">
         <form id="logoutForm" method="POST" action="${contextPath}/logout">
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
         </form>
 
-       <p class="cherk"> Вы вошли как: ${pageContext.request.userPrincipal.name} |
-           <button  onclick="document.forms['logoutForm'].submit()">Выйти</button></p>
+       <p class="cherk"> Вы вошли как: ${pageContext.request.userPrincipal.name}
+
 
     </c:if>
 
-<h1> Игра быки и коровы </h1>
+</ul>
+<h1 style="margin-top: 50px"> Игра быки и коровы </h1>
 <h2> Я загадал число, попробуй угадать его... </h2>
 <table>
     <tr >
