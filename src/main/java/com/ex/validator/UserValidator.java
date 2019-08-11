@@ -1,8 +1,6 @@
 package com.ex.validator;
-
 import com.ex.entity.User;
 import com.ex.service.UserService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -10,16 +8,16 @@ import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 /**
-
- * implements {@link Validator} interface.
+ * This class checks that the user data entered is correct.
  *
- * @author Eugene Suleimanov
+ * @author Zdornov Maxim
  * @version 1.0
  */
 
 @Component
 public class UserValidator implements Validator {
-       @Autowired
+
+    @Autowired
     private UserService userService;
 
     @Override

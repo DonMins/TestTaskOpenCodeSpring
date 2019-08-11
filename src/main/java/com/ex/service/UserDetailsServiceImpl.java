@@ -15,9 +15,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Implementation of {@link UserDetailsService} interface.
+ * UserDetailsServiceImpl implements UserDetailsService
  *
- * @author Eugene Suleimanov
+ * @author Zdornov Maxim
  * @version 1.0
  */
 
@@ -27,6 +27,10 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     private UserDao userDao;
 
+    /**
+     * SimpleGrantedAuthority: All users are assigned user roles.
+     * @param username of user
+     */
     @Override
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -35,7 +39,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
 
         grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_USER"));
-
         return new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), grantedAuthorities);
     }
 }

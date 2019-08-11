@@ -1,28 +1,25 @@
-
 body{
-    font-family: "Comic Sans MS"; /* Семейство шрифтов */
-    font-size: 18pt; /* Размер основного шрифта в пунктах  */
+    font-family: "Comic Sans MS";
+    font-size: 18pt;
     text-align: center;
     background-image:  url("font.jpg");
-    color: #ffffff; /* Цвет основного текста */
-
+    color: #ffffff;
 }
 textarea{
     min-width: 550px;
-    background: #fce9c0; /* Цвет фона */
-    border: 2px solid #a9c358; /* Параметры рамки */
-    padding: 10px; /* Поля */
-    width: 90%; /* Ширина */
+    background: #fce9c0;
+    border: 2px solid #a9c358;
+    padding: 10px;
+    width: 90%;
     border-radius: 5px;
-    height: 400px; /* Высота */
-    font-size: 14px; /* Размер шрифта */
+    height: 400px;
+    font-size: 14px;
     resize: none;
 }
 table {
-    font-size: 15pt; /* Размер основного шрифта в пунктах  */
-
+    font-size: 15pt;
     margin: auto;
-    width: 100%; /* Ширина таблицы в процентах */
+    width: 100%;
 }
 
 .button {
@@ -32,19 +29,16 @@ table {
     cursor:pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    font-size: 15pt; /* Размер основного шрифта в пунктах  */
+    font-size: 15pt;
     margin-top: 5px;
 }
 
 .input{
-
     margin-top: -35px;
     width: 200px;
     height: 40px;
     margin-left: 250px;
     max-width: 1024px;
-
-
 }
 .text{
     min-width: 620px;
@@ -54,7 +48,7 @@ table {
     margin-left: 35px;
     margin-top: 15px;
 }
-.cherk{
+.userInput{
     font-size: 12pt;
     text-align: right;
     margin-top: -13px;
@@ -66,9 +60,11 @@ table {
     margin-left: 250px;
     margin-top: -5px;
 }
+
 button:not(.active){
     border-radius: 6px;
 }
+
 button:hover:not(.active) {
     background: #786b59; /* Цвет фона под ссылкой */
     color: #ffe; /* Цвет ссылки */
@@ -89,7 +85,6 @@ ul {
 
 li {
     float: left;
-
 }
 
 li a {

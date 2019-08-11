@@ -11,9 +11,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
 
 /**
- * Implementation of {@link SecurityService} interface.
+ * SecurityServiceImpl implements SecurityService
  *
- * @author Eugene Suleimanov
+ * @author Zdornov Maxim
  * @version 1.0
  */
 
@@ -34,7 +34,6 @@ public class SecurityServiceImpl implements SecurityService {
         if (userDetails instanceof UserDetails) {
             return ((UserDetails) userDetails).getUsername();
         }
-
         return null;
     }
 
@@ -43,13 +42,6 @@ public class SecurityServiceImpl implements SecurityService {
         UserDetails userDetails = userDetailsService.loadUserByUsername(username);
         UsernamePasswordAuthenticationToken authenticationToken =
                 new UsernamePasswordAuthenticationToken(userDetails, password, userDetails.getAuthorities());
-
         authenticationManager.authenticate(authenticationToken);
-
-        if (authenticationToken.isAuthenticated()) {
-            SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-
-            logger.debug(String.format("Successfully %s auto logged in", username));
-        }
     }
 }

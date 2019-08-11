@@ -1,11 +1,20 @@
 package com.ex.task;
 
-public class Numbe {
+/**
+ * This class is for receiving JSON data.
+ *
+ * @author Zdornov Maxim
+ * @version 1.0
+ *
+ */
+
+public class youNumberOfjson {
+
     private String youNumber ="";
 
-    public Numbe(){}
+    public youNumberOfjson(){}
 
-    public Numbe(String number){
+    public youNumberOfjson(String number){
         this.youNumber = number;
     }
 

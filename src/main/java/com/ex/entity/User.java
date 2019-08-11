@@ -1,19 +1,19 @@
 package com.ex.entity;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 /**
  * Simple JavaBean domain object that represents a User.
  *
- * @author Eugene Suleimanov
+ * @author Zdornov Maxim
  * @version 1.0
  */
 
 @Entity
 @Table(name = "users")
 public class User {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -26,6 +26,8 @@ public class User {
 
     @Transient
     private String confirmPassword;
+
+    public User(){}
 
     public Long getId() {
         return id;

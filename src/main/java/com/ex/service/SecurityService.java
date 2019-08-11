@@ -3,13 +3,12 @@ package com.ex.service;
 /**
  * Service for Security.
  *
- * @author Eugene Suleimanov
+ * @author Zdornov Maxim
  * @version 1.0
  */
 
 public interface SecurityService {
 
     String findLoggedInUsername();
-
     void autoLogin(String username, String password);
 }

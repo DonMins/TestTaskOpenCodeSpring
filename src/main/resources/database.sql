@@ -1,11 +1,23 @@
 -- Table: users
 CREATE TABLE users (
-                       id       INT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
-                       username VARCHAR(255) NOT NULL,
+    id int not null auto_increment ,
+                       username VARCHAR(255) NOT NULL PRIMARY KEY,
                        password VARCHAR(255) NOT NULL
-)
-    ENGINE = InnoDB;
+);
 
--- Insert data
+-- Table: info for ratings
+CREATE TABLE ratings (
+    id int not null auto_increment,
+                            countgame LONG ,
+                            allAttempt LONG,
+                            username VARCHAR(255) NOT NULL PRIMARY KEY,
+                            youNumber VARCHAR(255)
+);
 
-INSERT INTO users VALUES (1, 'proselyte', '$2a$11$uSXS6rLJ91WjgOHhEGDx..VGs7MkKZV68Lv5r1uwFu7HgtRn3dcXG');
+-- Table: history
+CREATE TABLE history (
+    id int auto_increment,
+                         username VARCHAR(255) NOT NULL PRIMARY KEY,
+                         data LONGTEXT
+);
+
